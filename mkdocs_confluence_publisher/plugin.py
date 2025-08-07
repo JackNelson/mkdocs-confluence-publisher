@@ -32,7 +32,7 @@ class ConfluencePublisherPlugin(BasePlugin):
         self.confluence = Confluence(
             url=os.environ.get('CONFLUENCE_URL'),
             username=os.environ.get('CONFLUENCE_USERNAME'),
-            password=os.environ.get('CONFLUENCE_API_TOKEN')
+            token=os.environ.get('CONFLUENCE_API_TOKEN')
         )
         self.logger.debug("Confluence connection initialized")
         return config
